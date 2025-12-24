@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #f4f5f7;
+  --text-color: #0f172a;
+  --surface: #ffffff;
+  --border-color: #e2e8f0;
+  --muted: #64748b;
+  --accent: #10b981;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0b1020;
+  --text-color: #e2e8f0;
+  --surface: #111827;
+  --border-color: #1f2937;
+  --muted: #94a3b8;
+  --accent: #22c55e;
+  color-scheme: dark;
+}
+
+/* Override common Tailwind surface/text classes when in dark mode */
+[data-theme="dark"] .bg-white {
+  background-color: #111827 !important;
+}
+[data-theme="dark"] .border-slate-200 {
+  border-color: #1f2937 !important;
+}
+[data-theme="dark"] .text-slate-900 {
+  color: #e2e8f0 !important;
+}
+[data-theme="dark"] .text-slate-500,
+[data-theme="dark"] .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+[data-theme="dark"] .text-slate-400 {
+  color: #cbd5e1 !important;
+}
+[data-theme="dark"] .bg-slate-50 {
+  background-color: #0f172a !important;
+}
+[data-theme="dark"] .bg-slate-900\/60 {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
+[data-theme="dark"] .bg-slate-900\/40 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+[data-theme="dark"] .bg-slate-900\/50 {
+  background-color: rgba(15, 23, 42, 0.7) !important;
+}
+[data-theme="dark"] .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+[data-theme="dark"] .text-emerald-700 {
+  color: #34d399 !important;
+}
+
+.theme-page {
+  background-color: var(--bg-page);
+  color: var(--text-color);
+}
+
+.theme-surface {
+  background-color: var(--surface);
+  color: var(--text-color);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+
+.theme-muted {
+  color: var(--muted);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
